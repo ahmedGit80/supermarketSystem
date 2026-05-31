@@ -184,11 +184,11 @@ ShoppingCartStack::~ShoppingCartStack() {
 }
 
 bool ShoppingCartStack::stackIsEmpty() const {
-    return (top == -1);
+    return (top < 0);
 }
 
 bool ShoppingCartStack::stackIsFull() const {
-    return (top == MaxSize - 1);
+    return (top >= MaxSize - 1);
 }
 
 void ShoppingCartStack::push(string el) {
